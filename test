@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
+  theme: ThemeData(primaryColor: Colors.red),
+  home: Home(),
+));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.access_alarms),
+            onPressed: (){
+              print("Coba aja");
+            },
+          )
+        ],
+      ),
+
+      body: Container(
+        height: double.infinity,
+        child: Row( 
+          crossAxisAlignment: CrossAxisAlignment.center, // ini buat center
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
+          children: <Widget>[
+            Text("asads",
+              style: TextStyle(
+                color: Colors.teal,
+                fontSize: 30.0
+              ),
+            ),
+            Text("asads sss"),
+            Text("asads",
+              style: TextStyle(
+                color: Colors.teal,
+                fontSize: 30.0
+              ),
+            ),
+          ], 
+        ),
+      ),
+    );
+  }
+}
