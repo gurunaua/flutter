@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mahasiswa/screens/tabs_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   TextStyle style = TextStyle(fontSize: 20);
@@ -47,18 +48,20 @@ class LoginScreen extends StatelessWidget {
                 Material(
                   elevation: 5.0,
                   borderRadius: BorderRadius.circular(30.0),
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                   child: MaterialButton(
                     minWidth: MediaQuery.of(context).size.width,
                     padding: EdgeInsets.fromLTRB(20.0, 15.0, 15, 15.0),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => TabScreen()));
+                    },
                     child: Text(
                       "Login",
                       style: style.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
-
                 ),
                 SizedBox(
                   height: 15.0,
