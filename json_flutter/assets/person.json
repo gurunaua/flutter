@@ -1,0 +1,39 @@
+{
+  "name" : "ini name",
+  "age" : 27,
+  "hobi" : [
+    "main",
+    "belajar",
+    "berdoa"
+  ],
+  "numbers" : [
+    1,3,5
+  ],
+  "card": {
+    "id": 1,
+    "username" : "iniusername"
+  },
+  "doo": [
+    {
+      "do": "doing A"
+    },
+    {
+      "do": "doing B"
+    },
+    {
+      "do": "doing C"
+    },
+    {
+      "do": "doing D"
+    }
+  ],
+  "map": {
+    "one": {
+      "do": "doing A"
+    },
+    "two": {
+      "do": "doing B"
+    }
+  }
+
+}
