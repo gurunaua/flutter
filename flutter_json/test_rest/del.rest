@@ -1,0 +1,31 @@
+DELETE
+http://api.bengkelrobot.net:8001/api/profile/4
+@Content-Type: application/json
+{"name": "11 1","email": "11@gmail.com","age": 1}
+%%%
+# Duration: 55 ms
+# DELETE
+# http://api.bengkelrobot.net:8001/api/profile/4
+# Headers
+# @Content-Type: application/json
+# Body
+# {"name": "11 1","email": "11@gmail.com","age": 1}
+
+
+# status 400
+
+@X-Powered-By: Express
+@Vary: Origin, Accept-Encoding
+@Access-Control-Allow-Credentials: true
+@Cache-Control: no-cache
+@Pragma: no-cache
+@Expires: -1
+@Content-Type: application/json; charset=utf-8
+@Content-Length: 30
+@ETag: W/"1e-S7eD3d9V7JqXargRTQkPb1cO1Vw"
+@Date: Thu, 04 Mar 2021 15:59:39 GMT
+@Connection: keep-alive
+
+{
+  "message": "Bad Request"
+}

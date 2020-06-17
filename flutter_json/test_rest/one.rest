@@ -1,0 +1,48 @@
+GET
+http://api.bengkelrobot.net:8001/api/profile
+%%%
+# Duration: 63 ms
+# GET
+# http://api.bengkelrobot.net:8001/api/profile
+
+
+# status 200
+
+@X-Powered-By: Express
+@Vary: Origin, Accept-Encoding
+@Access-Control-Allow-Credentials: true
+@Cache-Control: no-cache
+@Pragma: no-cache
+@Expires: -1
+@Content-Type: application/json; charset=utf-8
+@Content-Length: 350
+@ETag: W/"15e-sa9DwfKZKK7XMZW1zhTsuhHv42k"
+@Date: Thu, 04 Mar 2021 15:59:43 GMT
+@Connection: keep-alive
+
+[
+  {
+    "id": 1,
+    "name": "11 1",
+    "email": "11@gmail.com",
+    "age": 1
+  },
+  {
+    "id": 2,
+    "name": "user2",
+    "email": "user2@mail.com",
+    "age": 18
+  },
+  {
+    "id": 3,
+    "name": "hgg",
+    "email": "ggg@gmail.con",
+    "age": 55
+  },
+  {
+    "id": 5,
+    "name": "XXXs 1",
+    "email": "XXXXs@gmail.com",
+    "age": 333
+  }
+]

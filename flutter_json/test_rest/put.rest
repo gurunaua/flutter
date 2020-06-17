@@ -1,0 +1,34 @@
+PUT
+http://api.bengkelrobot.net:8001/api/profile/1
+@Content-Type: application/json
+{"name": "11 1","email": "11@gmail.com","age": 1}
+%%%
+# Duration: 102 ms
+# PUT
+# http://api.bengkelrobot.net:8001/api/profile/1
+# Headers
+# @Content-Type: application/json
+# Body
+# {"name": "11 1","email": "11@gmail.com","age": 1}
+
+
+# status 200
+
+@X-Powered-By: Express
+@Vary: Origin, Accept-Encoding
+@Access-Control-Allow-Credentials: true
+@Cache-Control: no-cache
+@Pragma: no-cache
+@Expires: -1
+@Content-Type: application/json; charset=utf-8
+@Content-Length: 70
+@ETag: W/"46-aSMvgZb5o2mjNt8KZ0NJqrTB5lc"
+@Date: Thu, 04 Mar 2021 15:58:38 GMT
+@Connection: keep-alive
+
+{
+  "id": 1,
+  "name": "11 1",
+  "email": "11@gmail.com",
+  "age": 1
+}

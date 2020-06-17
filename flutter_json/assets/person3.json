@@ -1,0 +1,13 @@
+{
+  "name": "Yudi Setiawan",
+  "age": 25,
+  "hobi": [
+    "Coding",
+    "Main Game",
+    "Menulis"
+  ],
+  "github": {
+    "username": "CoderJava",
+    "repository": 278
+  }
+}
