@@ -10,6 +10,7 @@ dependencies:
   get: 4.3.4
   fancy_bottom_navigation: ^0.3.3
   loading_overlay: ^0.3.0
+  get_storage: ^2.0.3
   flutter: 
     sdk: flutter
 

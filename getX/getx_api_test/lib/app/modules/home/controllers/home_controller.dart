@@ -2,13 +2,15 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_api/app/data/providers/list_provider.dart';
 import '../../../data/list_respons_model.dart';
 
 class HomeController extends GetxController {
   var isLoading = false.obs;
-  var data = SomeRootEntity().obs;
+
+  var data = SomeRootEntity(data: List.empty()).obs;
   String json =
-      ' {"browsers":{"firefox":{"name":"Firefox","pref_url":"about:config","releases":{"1":{"release_date":"2004-11-09","status":"retired","engine":"Gecko","engine_version":"1.7"}}}}} ';
+      ' {"data":[{"item_code":"no data","item_name":"no name","image":null,"normal_rate":0,"promo_rate":0}]} ';
 
   @override
   void onReady() {
@@ -18,8 +20,15 @@ class HomeController extends GetxController {
     load();
   }
 
-  void load() {
-    SomeRootEntity root = SomeRootEntity.fromJson(jsonDecode(json));
-    data = root.obs;
+  void load() async {
+    isLoading.value = true;
+    SomeRootEntity response = await ListProvider().getList();
+    if (response != null && response.data != null)
+      data.value = response;
+    else
+      data.value = SomeRootEntity.fromJson(jsonDecode(json));
+
+    print("hasil : ${data.value.data}");
+    isLoading.value = false;
   }
 }

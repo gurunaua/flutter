@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:get/get.dart';
 import '../login_request_model.dart';
@@ -22,12 +23,25 @@ class LoginRequestProvider extends GetConnect {
     final response = await post(
       "${url}method/login",
       request.toJson(),
+      headers: {
+        HttpHeaders.hostHeader: "172.104.44.22",
+      },
     );
+    if (response.headers == null ||
+        !response.headers!.containsKey(HttpHeaders.setCookieHeader)) {
+      var setCookie = response.headers![HttpHeaders.setCookieHeader];
+      print("Cookie = ${setCookie.toString()}");
+    }
+
     print('response: ${response.bodyString}');
     LoginRespons responsex = LoginRespons();
     if (response != null && response.bodyString != null) {
-      responsex =
-          LoginRespons.fromJson(jsonDecode(response.bodyString.toString()));
+      try {
+        responsex =
+            LoginRespons.fromJson(jsonDecode(response.bodyString.toString()));
+      } on Exception catch (_) {
+        print('Error ${_}');
+      }
     }
     return responsex;
   }
