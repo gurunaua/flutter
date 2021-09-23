@@ -15,7 +15,7 @@ class SplashView extends GetView<SplashController> {
         children: [
           Center(
             child: Icon(
-              Icons.cloud_download,
+              Icons.login,
               color: Colors.blue,
               size: 200.0,
             ),

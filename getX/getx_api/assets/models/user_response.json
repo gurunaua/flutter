@@ -1,0 +1,11 @@
+{
+  "name": "string admin",
+  "username": "admin1",
+  "email": "admin1@email.com",
+  "role": [
+    "admin"
+  ],
+  "password": "123456",
+  "address": "string",
+  "photo": "string"
+}
