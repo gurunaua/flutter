@@ -1,0 +1,52 @@
+
+###
+POST http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "name": "",
+  "phoneNumber": "+1 234 567",
+  "email": "john.doe@gmail.com",
+  "address__street": "New York address__street",
+  "address__city": "New York address__city",
+  "address__state": "New York address__city",
+  "address__postal_code": "12345 address__city",
+  "address__country": "US address__city"
+}
+
+###
+GET http://localhost:8080/person
+
+
+###
+PUT http://localhost:8080/person
+Content-Type: application/json
+
+{
+  "id": 7,
+  "name": "John Doe1",
+  "phoneNumber": "+1 234 5671",
+  "email": "john.doe@gmail1.com",
+  "address__street": "New York address__street1",
+  "address__city": "New York address__city1",
+  "address__state": "New York address__city1",
+  "address__postal_code": "12345 address__city1",
+  "address__country": "US address__city1"
+}
+
+<> 2021-07-31T181404.200.json
+<> 2021-07-31T181237.200.json
+<> 2021-07-31T181227.200.json
+
+###
+DELETE http://localhost:8080/person/1
+
+<> 2021-07-31T192124.200.json
+<> 2021-07-31T191739.200.json
+<> 2021-07-31T182541.200.json
+<> 2021-07-31T182137.200.json
+<> 2021-07-31T182107.200.json
+<> 2021-07-31T182059.200.json
+<> 2021-07-31T182010.200.json
+<> 2021-07-31T181836.200.json
+<> 2021-07-31T181459.200.json
